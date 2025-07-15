@@ -6,6 +6,7 @@ const { OpenAI } = require("openai");
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(express.static("public"));
 
 const openai = new OpenAI({
   apiKey: process.env.GROQ_API_KEY,
